@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de las danzas del Perú">
+    <meta name="keywords" content="galeria, perú, danzas del perú, danzas">
+    <meta name="author" content="Gerson Aguedo Yanac | Goraycode" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="build/img/peru.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto+Slab:wght@300;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <title>Galeria de danzas del Perú</title>
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+
+<body>
+
+    <header class="header">
+        <div class="header__flex contenedor">
+            <div class="header__logo">
+                <p class="header__name">PERÚ</p>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Galería</a>
+                <a href="about.html" class="nav__link">Sobre Perú</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="build/img/costaperuana.jpg" alt="" class="swiper-img">
+            </div>
+            <div class="swiper-slide">
+                <img src="build/img/sierraperuana.jpg" alt="" class="swiper-img">
+            </div>
+            <div class="swiper-slide">
+                <img src="build/img/selvaperuana.jpg" alt="" class="swiper-img">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <img class="wave-top" src="build/img/wave-top.svg" alt="">
+    <main class="about">
+        <h2 class="about__heading">Sobre Perú</h2>
+        <div class="about__container contenedor">
+            <p class="about__text">
+                El Perú está ubicado entre la línea ecuatorial y el Trópico de Capricornio, en América del Sur. Sus
+                fronteras limitan, por el sur, con Chile; por el sureste con Bolivia; por el este con Brasil; por el
+                norte
+                con Ecuador y Colombia; y por el oeste con el Océano Pacífico. Por su ubicación geográfica, el país
+                posee
+                una gran variedad de recursos naturales, hábitats y ecosistemas, así como una invalorable diversidad de
+                flora y fauna. El Perú está entre los 10 países más megadiversos del mundo, lo que le da un protagonismo
+                clave en el equilibrio ecológico del planeta.
+            </p>
+
+            <p class="about__text about__text--M">
+                EL PERÚ: UN PAÍS MEGADIVERSO
+                En todos los aspectos referentes a la diversidad biológica el Perú está entre los 10 países
+                de mayor diversidad de la Tierra, conocidos como "países megadiversos", por su
+                diversidad de ecosistemas, de especies, de recursos genéticos y de culturas aborígenes
+                con conocimientos resaltantes.
+                El Perú posee una muy alta diversidad ecológica de climas, de pisos ecológicos y zonas
+                de producción, y de ecosistemas productivos.
+                En superficie de bosques es el segundo país en América Latina y el cuarto a nivel
+                mundial, y posee el 13% de los bosques tropicales amazónicos.
+                Se reconocen 11 ecorregiones, que comprenden el mar frío, el mar tropical, el desierto
+                costero, el bosque seco ecuatorial, el bosque tropical del Pacífico, la serranía esteparia, la
+                puna, el páramo, los bosques de lluvias de altura (selva alta), el bosque tropical
+                amazónico (selva baja) y la sabana de palmeras. De las 117 zonas de vida reconocidas en
+                el mundo 84 se encuentran en el Perú.
+                En el territorio nacional se encuentran ecosistemas reconocidos a nivel mundial por su
+                altísima diversidad de especies como el mar frío de la Corriente Peruana; los bosques
+                secos en la costa norte; la puna; la selva alta, y los bosques tropicales amazónicos, donde
+                la diversidad de especies llega a su máxima expresión.
+            </p>
+        </div>
+    </main>
+    <img class="wave-bottom" src="build/img/wave-bottom.svg" alt="">
+
+    <footer class="footer">
+        <div class="footer__grid contenedor">
+            <div class="header__logo">
+                <p class="header__name header__name--red">PERÚ</p>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav__link nav__link--red">Galería</a>
+                <a href="about.html" class="nav__link nav__link--red">Sobre Perú</a>
+            </nav>
+            <p class="footer__text">
+                ¿Quieres una página o aplicación web?, no dudes en escribirme al
+                <a href="https://wa.link/i0gb0w" class="footer__link" target="_blank"
+                    rel="noopener noreferrer">whatsapp</a>
+                o visita <a href="#" class="footer__link">mi página web</a>
+            </p>
+        </div>
+        <h3 class="footer__heading">copyright© 2022. Diseñado y desarrollado por Gerson Aguedo Yanac | Goraycode</h3>
+    </footer>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
