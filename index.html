@@ -37,6 +37,14 @@
             </nav>
         </div>
     </header>
+
+
+    <div class="loading">
+        <div class="clock"></div>
+        <h2 class="clock-text">Cargando....</h2>
+    </div>
+
+
     <div class="hero">
         <div id="defs" class="defilee-visually-hidden">
             <svg width="0" height="0" viewBox="0 0 600 600" id="axure-svg">
@@ -808,7 +816,7 @@
 
                             <div class="card">
                                 <a href="#modal-8" class="img">
-                                    <img class="card__img" loading="lazy" src="build/img/loreto.jpeg" alt="sanmartin">
+                                    <img class="card__img" loading="lazy" src="build/img/loreto.jpeg" alt="loreto">
                                 </a>
                                 <p class="card__text">Loreto</p>
                                 <article id="modal-8" class="modal">
@@ -2275,7 +2283,21 @@
 
 
     <script src="js/main.js"></script>
+    <script>
+        //loading
+        const loading = document.querySelector('.loading');
+        let time = 0;
 
+        document.addEventListener('DOMContentLoaded', () => {
+
+            time = setTimeout(noneLoading, 30000);
+
+        });
+
+        function noneLoading() {
+            loading.classList.add('noneLoading');
+        }
+    </script>
 </body>
 
 </html>
