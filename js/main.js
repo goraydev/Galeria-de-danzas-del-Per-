@@ -1,3 +1,9 @@
+//update coypright
+let currentYear = new Date();
+const updateYear = document.querySelector('.footer__heading span');
+updateYear.textContent = currentYear.getFullYear();
+
+//body without scroll
 
 anime({
     targets: '.anime',
