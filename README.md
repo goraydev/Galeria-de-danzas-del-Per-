@@ -1,4 +1,4 @@
-<h1>Galería de las danzas del Perú</h1>
+<h1 align="center">Galería de las danzas del Perú</h1>
 <p>Sitio web que muestra fotos y videos de las danzas de cada región del Perú</p>
 <br>
 Enlace: https://galeriadedanzasdelperu.netlify.app/
