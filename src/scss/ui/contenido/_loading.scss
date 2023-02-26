@@ -1,0 +1,100 @@
+@use "../../base/variables" as v;
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: v.$black;
+  height: 100vh;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.noneLoading {
+  display: none;
+}
+
+.clock-text {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.clock {
+  display: table;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border: 6px solid #ff4040;
+  border-radius: 100%;
+  position: relative;
+  &:before {
+    content: "";
+    width: 6px;
+    height: 80px;
+    background-color: #ff4040;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transform-origin: bottom;
+    animation: timeIcon 12s cubic-bezier(0.95, -1.5, 0.285, 1.85) infinite;
+  }
+  &:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #ff4040;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes timeIcon {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  8.33% {
+    transform: translateX(-50%) rotate(30deg);
+  }
+  16.66% {
+    transform: translateX(-50%) rotate(60deg);
+  }
+  24.99% {
+    transform: translateX(-50%) rotate(90deg);
+  }
+  33.32% {
+    transform: translateX(-50%) rotate(120deg);
+  }
+  41.65% {
+    transform: translateX(-50%) rotate(150deg);
+  }
+  49.98% {
+    transform: translateX(-50%) rotate(180deg);
+  }
+  58.31% {
+    transform: translateX(-50%) rotate(210deg);
+  }
+  66.64% {
+    transform: translateX(-50%) rotate(240deg);
+  }
+  74.97% {
+    transform: translateX(-50%) rotate(270deg);
+  }
+  83.8% {
+    transform: translateX(-50%) rotate(300deg);
+  }
+  91.63% {
+    transform: translateX(-50%) rotate(330deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}

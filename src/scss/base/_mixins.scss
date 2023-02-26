@@ -1,0 +1,67 @@
+@use "variables" as v;
+
+/* Media queries */
+@mixin phone {
+  @media screen and (min-width: v.$telefono) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: v.$tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: v.$desktop) {
+    @content;
+  }
+}
+
+@mixin maxDesktop {
+  @media screen and (min-width: v.$maxDesktop) {
+    @content;
+  }
+}
+
+@mixin grid($columnas, $espaciado) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $espaciado;
+}
+
+@mixin degradado {
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    v.$red900 0%,
+    v.$white 50%,
+    v.$red900 100%
+  );
+  background-clip: text;
+}
+
+@mixin subtitular {
+  text-align: center;
+  padding: 0 0 2rem;
+  color: v.$black;
+  font-size: 1.5rem;
+
+  @include tablet {
+    font-size: 3rem;
+  }
+}
+
+@mixin galleryPhone($number) {
+  display: grid;
+  grid-template-columns: repeat($number, 15rem);
+  gap: 2rem;
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+
+  & > * {
+    scroll-snap-align: center;
+  }
+}

@@ -1,0 +1,38 @@
+@use "variables" as v;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: v.$roboto;
+  background-color: v.$black;
+}
+
+.contenedor {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

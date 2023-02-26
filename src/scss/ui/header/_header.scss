@@ -1,0 +1,196 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.header {
+  background-color: v.$red900;
+  padding: 2rem 0;
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include m.tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__name {
+    font-family: v.$neo;
+    font-size: 3rem;
+    font-weight: bold;
+    color: v.$black;
+
+    &--red{
+      color: v.$red500;
+    }
+  }
+}
+
+.nav {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  @include m.tablet {
+    margin-top: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: v.$black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: color 250ms ease, text-decoration 250ms ease;
+    text-transform: uppercase;
+
+    &--red{
+      color: v.$red500;
+    }
+
+    &:hover {
+      color: v.$white;
+      text-decoration: underline;
+    }
+  }
+}
+
+.hero {
+  position: relative;
+  &__arrow {
+    position: absolute;
+    bottom: 10rem;
+    left: 50%;
+    color: transparent;
+    background-image: linear-gradient(
+      to right,
+      v.$red900 0%,
+      v.$white 50%,
+      v.$red900 100%
+    );
+    background-clip: text;
+    font-size: 4rem;
+
+    animation-name: movArrow;
+    animation-timing-function: ease;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes movArrow {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+}
+
+/* -------------------- HERO ----------------------- */
+h1 {
+  margin: 0;
+  font-size: calc(2vw + 20px);
+  position: absolute;
+  left: 10%;
+  transform: translateZ(0.1px) scale(1.2);
+  font-family: v.$roboto;
+
+  @include m.degradado;
+}
+h1.clone {
+  left: 60%;
+}
+.defilee__main {
+  position: relative;
+  margin: 0 auto;
+}
+.defilee__outer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  perspective: 0.5px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.defilee__main,
+.defilee__main *,
+.defilee__outer,
+.defilee__outer * {
+  box-sizing: border-box;
+}
+.defilee__ctnr {
+  transform-style: preserve-3d;
+
+  display: inline-flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.defilee__div {
+  position: relative;
+  transform: translate3d(0, -16vh, 0);
+  width: 25vw;
+  margin: 0 -2vw;
+}
+.defilee__div--special {
+  transform: translateZ(-0.2px) scale(1.4) translateX(30px) translateY(20vh);
+}
+.defilee__div--special1 {
+  transform: translateZ(-0.25px) scale(1.4) translateX(-0.3vw) translateY(0);
+}
+.defilee__div--special2 {
+  transform: translateZ(0.2px) scale(1) translateX(0.5vw) translateY(-25vh);
+}
+.defilee__div--special3 {
+  transform: translateZ(-0.5px) scale(1.5) translateX(-30px) translateY(-30vh);
+}
+.defilee__div--special4 {
+  transform: translateZ(-0.65px) scale(3) translateX(30px) translateY(-10vh);
+}
+.defilee__ctnr {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+.defilee__ctnr {
+  animation: slide 30s linear infinite;
+}
+@keyframes slide {
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+* {
+  transform-origin: 50% 50%;
+}
+.defilee-visually-hidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+@include m.tablet {
+  .defilee-visually-hidden {
+    display: none;
+  }
+}

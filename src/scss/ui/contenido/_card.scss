@@ -1,0 +1,49 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.card {
+  &__img {
+    object-fit: cover;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    transition: transform 500ms ease;
+
+    width: 100%;
+    height: 15rem;
+
+    @include m.tablet {
+      width: 100%;
+      height: 30rem;
+      &:hover {
+        animation-name: movCard;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        /* animation-direction: alternate; */
+      }
+    }
+  }
+  &__text {
+    text-transform: uppercase;
+    background-color: v.$white;
+    text-align: center;
+    color: v.$black;
+    padding: 1rem 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+}
+
+@keyframes movCard {
+  0% {
+    transform: translateX(-2%);
+  }
+
+  50% {
+    transform: translateX(2%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

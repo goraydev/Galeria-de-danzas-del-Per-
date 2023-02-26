@@ -1,0 +1,38 @@
+{
+  "name": "perudancegallery",
+  "version": "1.0.0",
+  "description": "Galeria de danzas del PerÚ, hecho con Sass y Bem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goraycode/Galeria-de-danzas-del-Per-.git"
+  },
+  "author": "Gerson Aguedo Yanac | Goraycode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goraycode/Galeria-de-danzas-del-Per-/issues"
+  },
+  "homepage": "https://github.com/goraycode/Galeria-de-danzas-del-Per-#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.16",
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.49.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "postcss": "^8.4.5"
+  }
+}

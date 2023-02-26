@@ -1,0 +1,36 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.south {
+  padding-bottom: 3rem;
+  &__grid {
+    @include m.galleryPhone(10);
+
+    @include m.tablet {
+      overflow-x: hidden;
+      @include m.grid(4, 2rem);
+
+      /* POSITONS CARDS */
+      .card:nth-child(1) {
+        grid-row: 1 / 2;
+        grid-column: 1 / 5;
+      }
+
+      .card:nth-child(6) {
+        grid-row: 3 / 4;
+        grid-column: 1 / 4;
+      }
+
+      .card:nth-child(7) {
+        grid-row: 3 / 5;
+        grid-column: 4 / 5;
+        @include m.tablet {
+          .card__img {
+            height: 95%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

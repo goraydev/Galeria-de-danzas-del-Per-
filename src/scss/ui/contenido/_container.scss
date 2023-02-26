@@ -1,0 +1,24 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.gallery {
+  margin-top: 3rem;
+  &__heading {
+    padding: 1rem 0;
+    @include m.degradado;
+    text-align: center;
+    font-size: 3rem;
+    @include m.tablet {
+      font-size: 5rem;
+    }
+  }
+
+  &__wave {
+    width: 100%;
+    transform: translateY(2%);
+
+    &--bottom {
+      transform: translateY(-5%);
+    }
+  }
+}

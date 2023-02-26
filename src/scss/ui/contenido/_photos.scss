@@ -1,0 +1,19 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.photos {
+  background-color: v.$red900;
+
+  &--black {
+    background-color: v.$black;
+    padding-bottom: 5rem;
+  }
+
+  &__heading {
+    @include m.subtitular;
+
+    &--red {
+      color: v.$red900;
+    }
+  }
+}
